@@ -1,20 +1,20 @@
 @echo off
-IF EXIST winscp ( rd /s /q winscp )
-mkdir winscp
+IF EXIST AutosyncLDAP ( rd /s /q AutosyncLDAP )
+mkdir AutosyncLDAP
 
-copy ..\winscp556\WinSCP.exe winscp
-copy ..\winscp556\WinSCP.com winscp
-copy ..\winscp556\get_ldap.cmd winscp
-copy ..\winscp556\get_ldap.txt winscp
+copy ..\winscp556\WinSCP.exe AutosyncLDAP
+copy ..\winscp556\WinSCP.com AutosyncLDAP
+copy ..\winscp556\get_ldap.cmd AutosyncLDAP
+copy ..\winscp556\get_ldap.txt AutosyncLDAP
 
 IF EXIST winscp.wxs ( del /F winscp.wxs )
 IF EXIST AutosyncLDAP.wxs ( del /F AutosyncLDAP.wxs )
 copy AutosyncLDAP.wxs.template AutosyncLDAP.wxs
-copy AutosyncLDAP.ico winscp
+copy AutosyncLDAP.ico AutosyncLDAP
 
 SET wixbin="D:\WiX Toolset v3.9\bin"
-SET workingdir="%~dp0PS1MonService"
-SET wixobj="%~dp0PS1MonService\*.wixobj"
+SET workingdir="%~dp0AutosyncLDAP"
+SET wixobj="%~dp0AutosyncLDAP\*.wixobj"
 SET heatfile="%~dp0winscp.wxs"
 SET mainfile="%~dp0AutosyncLDAP.wxs"
 SET msifile="%~dp0AutosyncLDAP-%1.msi"

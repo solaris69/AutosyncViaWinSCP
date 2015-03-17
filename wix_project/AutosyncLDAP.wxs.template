@@ -3,7 +3,7 @@
 <?define Version = "@MAJORVERSION@" ?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Product Id="*" UpgradeCode="$(var.UpgradeCode)"
-             Name="AutosyncLDAP" Version="$(var.Version)" Manufacturer="WinSCP" Language="1033">
+             Name="AutosyncLDAP" Version="$(var.Version)" Manufacturer="Thomson Reuters" Language="1033">
         <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
         <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
 
