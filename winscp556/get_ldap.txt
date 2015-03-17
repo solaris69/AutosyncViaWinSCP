@@ -1,0 +1,15 @@
+# Automatically abort script on errors
+option batch abort
+# Disable overwrite confirmations that conflict with the previous
+option confirm off
+# Connect to SFTP server using a password
+open UPGCCsftp
+# Get file
+#get -transfer=ascii -resumesupport=off /home/ldap_read/ldapdailydelta.txt d:\ldap
+#get -transfer=ascii -resumesupport=off /home/ldap_read/ldapfull.txt d:\ldap
+#get -transfer=ascii -resumesupport=off /home/ldap_read/ldapfulltab.txt d:\ldap
+# Sync remote to local
+synchronize local d:\ldap /home/ldap_read
+# Disconnect
+close
+exit
